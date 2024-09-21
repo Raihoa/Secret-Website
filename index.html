@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Giraffe et Pokémon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cookie Consent Modal -->
+    <div id="cookieConsent" class="modal">
+        <div class="modal-content">
+            <h2>Cher Pilou-pilou, veux-tu accepter les cookies ?</h2>
+            <button id="acceptCookies">Oui</button>
+            <button id="declineCookies">Non</button>
+        </div>
+    </div>
+
+    <!-- Second Cookie Prompt -->
+    <div id="secondPrompt" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2>Es-tu sûre ? Tu as fait tellement de sport ! Tu mérites des cookies !</h2>
+            <button id="acceptAfterDecline">Oui</button>
+            <button id="finalDecline">Non</button>
+        </div>
+    </div>
+
+    <!-- Quiz Rules -->
+    <div id="rulesSection" style="display:none;">
+        <h1>Les règles du Jeu</h1>
+        <p>Bienvenue ! Ce jeu est un petit quiz qui comporte 5 questions sur les girafes et 5 questions sur les Pokémons. Si tu obtiens au moins 7 bonnes réponses, tu gagnes ! Mais attention, si tu as tout juste, tu recevras une récompense spéciale !
+        Pourquoi des questions sur le giraffes et les Pokémons ?
+        Ce n'est pas toi qui pose les questions ! ;)</p>
+        <button id="startQuiz">Commencer le Quiz</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quizSection" style="display:none;">
+        <h1 id="questionTitle"></h1>
+        <img id="questionImage" src="" alt="Image de la question" style="width: 300px; margin: 20px;">
+        <div id="quizForm">
+            <!-- Question options will be dynamically generated here -->
+        </div>
+    </div>
+
+    <!-- Result Section -->
+    <div id="resultMessage"></div>
+    <div id="reward" style="display:none;">
+        <img id="rewardImg" src="giraffe.jpg" alt="Girafe Souriante" style="width: 200px; margin: 20px;"/>
+    </div>
+    <canvas id="laserCanvas" style="display:none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
